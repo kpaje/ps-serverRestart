@@ -10,7 +10,7 @@
     $CurrentDomain = "LDAP://" + ([ADSI]"").distinguishedName
     $domain = New-Object System.DirectoryServices.DirectoryEntry($CurrentDomain, $AdUser, $AdPassword)
 
-    Write-Host "Verifying"
+    Write-Host "Verifying..." -ForegroundColor Magenta
     Write-Host "UserName - KCLS\$adUser" -ForegroundColor Magenta
     Write-Host "Password - $password" -ForegroundColor Magenta
 

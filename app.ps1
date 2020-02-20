@@ -1,11 +1,13 @@
 ﻿Import-Module .\promptCredentials.psm1
 Import-Module .\promptMenu.psm1
 Import-Module .\common.psm1
+Import-Module .\verifyDomainAdmin.psm1
 $SERVERLIST = Get-Content -Path .\ServerList.txt
 
 function runApp {
     promptMenu
     promptCredentials
+    verifyDomainAdmin
     startUpMessage
 
     foreach ($SERVER in $SERVERLIST) {
