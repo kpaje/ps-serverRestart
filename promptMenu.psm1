@@ -13,7 +13,7 @@
     [int]$DEFAULTCHOICE = 2 #&Quit
     $prompt = $host.UI.PromptForChoice($TITLE , $INFO , $OPTIONS, $DEFAULTCHOICE)
     switch ($prompt) {
-        0 { "One Server"; break }
+        0 { Write-Host "RESTART ALL THE THINGS!!!" -Verbose -ForegroundColor DarkGreen; break }
         1 { "All Servers"; break }
         2 { Write-Host "GOODBYE" -ForegroundColor Cyan }
     }

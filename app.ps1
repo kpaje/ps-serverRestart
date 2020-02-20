@@ -17,8 +17,7 @@ function runApp {
             Write-Host "Checking $SERVER LPTone and PCRes services" -ForegroundColor Green
             checkServices -server $SERVER
             Write-Host "$SERVER has successfully rebooted!" -ForegroundColor Green 
-        }
-        else {
+        } else {
             Test-Connection  $SERVER
             Write-Verbose -Message "$SERVER, awaiting conection"
         }

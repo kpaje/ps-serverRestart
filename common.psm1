@@ -1,5 +1,4 @@
 ﻿function startUpMessage {
-    Write-Host "RESTART ALL THE THINGS!!!" -Verbose -ForegroundColor Yellow
     Write-Host "Attempting to restart..." -Verbose -ForegroundColor Yellow
 }
 
