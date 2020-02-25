@@ -1,4 +1,9 @@
 ﻿function promptCredentials {
+    <#
+    .DESCRIPTION
+        Verifies active directory user credentials against domain
+    #>
+
     [CmdletBinding()]
     # param (
     #     [Parameter()]

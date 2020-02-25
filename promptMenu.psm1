@@ -1,4 +1,8 @@
 ﻿function promptMenu {
+    <#
+    .DESCRIPTION
+        Creates a menu console prompt
+    #>
     [CmdletBinding()]
 
     $TITLE = Write-Host "KCLS ITS SERVER RESTART SCRIPT" -ForegroundColor DarkYellow

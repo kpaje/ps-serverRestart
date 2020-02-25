@@ -2,6 +2,10 @@ $GROUPNAME =  Get-Content -Path ./groupName.txt
 $DOMAIN = 'KCLS'
 
 function verifyDomainAdmin {
+    <#
+    .DESCRIPTION
+        Verifies active directory user has administrative permissions
+    #>
   [CmdletBinding()]
   # param (
   #     [Parameter()]
