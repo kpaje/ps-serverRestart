@@ -2,6 +2,12 @@ $GROUPNAME =  Get-Content -Path ./groupName.txt
 $DOMAIN = 'KCLS'
 
 function verifyDomainAdmin {
+  [CmdletBinding()]
+  # param (
+  #     [Parameter()]
+  #     [TypeName]
+  #     $ParameterName
+  # )
     $CurrentUser = $env:UserName | Get-ADUser
     $DomainAdminGroupMembers = Get-ADGroupMember $GROUPNAME | Select-Object SamAccountName
     $CurrentUserinDomainAdminGroup = $DomainAdminGroupMembers.SamAccountName -contains $CurrentUser.SamAccountName

@@ -5,6 +5,12 @@ Import-Module .\verifyDomainAdmin.psm1
 $SERVERLIST = Get-Content -Path .\ServerList.txt
 
 function runApp {
+    [CmdletBinding()]
+    # param (
+    #     [Parameter()]
+    #     [TypeName]
+    #     $ParameterName
+    # )
     promptMenu
     promptCredentials
     verifyDomainAdmin

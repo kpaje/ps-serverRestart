@@ -1,18 +1,27 @@
 ﻿function startUpMessage {
+    [CmdletBinding()]
+    # param (
+    #     [Parameter()]
+    #     [TypeName]
+    #     $ParameterName
+    # )
     Write-Host "Attempting to restart..." -Verbose -ForegroundColor Yellow
 }
 
 function checkServices {
-    param(
-        [Parameter(Mandatory = $True)]  
-        [String]
-        $server
+    [CmdletBinding()]
+    param (
+        [Parameter()]
+        [TypeName]
+        $ParameterName
     )
+
     $SERVICES = 'lptclient', 'LPT:One Job Queue Engine', 'ewSystemMonitor', 'PCReservationManagementService'
     Get-Service -Name $SERVICES -ComputerName $server
 }
 
 function restartServer {
+    [CmdletBinding()]
     param (
         [Parameter(Mandatory = $True)]  
         [String]
@@ -22,6 +31,7 @@ function restartServer {
 }
 
 function testConnection {
+    [CmdletBinding()]
     param(
         [Parameter(Mandatory = $True)]
         [String]

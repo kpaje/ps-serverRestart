@@ -1,4 +1,11 @@
 ﻿function promptCredentials {
+    [CmdletBinding()]
+    # param (
+    #     [Parameter()]
+    #     [TypeName]
+    #     $ParameterName
+    # )
+
     $username = Read-Host "INPUT USERNAME"
     $password = Read-Host "INPUT PASSWORD" -AsSecureString
     $DOMAIN = 'KCLS'

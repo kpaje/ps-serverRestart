@@ -1,4 +1,6 @@
 ﻿function promptMenu {
+    [CmdletBinding()]
+
     $TITLE = Write-Host "KCLS ITS SERVER RESTART SCRIPT" -ForegroundColor DarkYellow
     $INFO = Write-Host "Select one server or all servers" -ForegroundColor Blue
 
